@@ -18,15 +18,15 @@ describe("pathWorking", () =>{
   });
 });
 
-/*describe ('pathIsAbsolute', () => {
-  it('should be true', () => {
-    expect(mdLinks.pathIsAbsolute("/home/laboratoria173/Laboratoria/GDL002-md-links/README.md"))
-      .toBe(true);
-  });
-  it('should be false', () => {
-    expect(mdLinks.pathIsAbsolute("Laboratoria/GDL002-md-links/README.md")).toBe(false);
-  });
-});*/
+//describe ('pathIsAbsolute', () => {
+//   it('should be true', () => {
+//     expect(mdLinks.pathAbsolute("/home/laboratoria173/Laboratoria/GDL002-md-links/README.md"))
+//       .toBe(true);
+//   });
+//   it('should be false', () => {
+//     expect(mdLinks.pathAbsolute("Laboratoria/GDL002-md-links/README.md")).toBe(false);
+//   });
+// });
 
 describe("pathDirectory", () =>{
   it("Should be true", () => {
@@ -37,12 +37,12 @@ describe("pathDirectory", () =>{
   });
 });
 
-describe("pathMd", () => {
+describe("fileMd", () => {
   it("Should be true", () => {
-    expect(index.pathMd("./README.md")).toBe(true);
+    expect(index.fileMd("./README.md")).toBe(true);
   });
   it("Should be false", () => {
-    expect(index.pathMd("./README.txt")).toBe(false);
+    expect(index.fileMd("./README.txt")).toBe(false);
   });
 });
 

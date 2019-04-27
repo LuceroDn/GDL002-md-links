@@ -28,14 +28,14 @@ if(fs.existsSync(pathFile)){
 },
 
 //Funcion para saber si la ruta es absoluta
-  /*pathIsAbsolute : function (pathfile){
-    if(path.isAbsolute(pathfile)){
-      return true;
-    }
-    else{
-      return false
-    }
-  }*/
+  //pathmAbsolute : function (pathfile){
+  //   if(path.isAbsolute(pathfile)){
+  //     return true;
+  //   }
+  //   else{
+  //     return false
+  //   }
+  // }
 
 //Función para verificar si la ruta es un directorio
 pathDirectory: function(pathFile){
@@ -47,7 +47,7 @@ pathDirectory: function(pathFile){
 },
 
 //Funcion que checa si es un .md
-pathMd: function(pathFile){
+fileMd: function(pathFile){
 if(path.extname(pathFile) === ".md"){
   return true
 } else {
