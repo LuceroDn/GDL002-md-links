@@ -1,13 +1,14 @@
-const fs = require('fs');
-const path = require('path');
+
+const linksMd = require("../src/links.js");
 const pathFile = process.argv[2];
+const path = require('path');
 const readingFileResult = linksMd(pathFile, null);
-const linksMd = require('./links.js');
+const fs = require('fs');
 
 
 
   //Funcion para verificar si el campo está vacío o lleno
-  pathInserted: function (pathFile) {
+function pathInserted (pathFile) {
     if (pathFile == undefined) {
       console.log("You didn't enter a path");
       return false
@@ -16,10 +17,10 @@ const linksMd = require('./links.js');
       console.log("You entered a path")
       return true
     }
-  },
+  };
 
   //Función para saber si la ruta existe o no 
-  pathWorking: function (pathFile) {
+  function pathWorking (pathFile) {
     if (fs.existsSync(pathFile)) {
       console.log("true");
       return true
@@ -27,7 +28,7 @@ const linksMd = require('./links.js');
       console.log("false");
       return false
     }
-  },
+  };
 
   //Funcion para saber si la ruta es absoluta
   //pathmAbsolute : function (pathfile){
@@ -40,22 +41,22 @@ const linksMd = require('./links.js');
   // }
 
   //Función para verificar si la ruta es un directorio
-  pathDirectory: function (pathFile) {
+  function pathDirectory (pathFile) {
     if (fs.statSync(pathFile).isDirectory()) {
       return true
     } else {
       return false
     }
-  },
+  };
 
   //Funcion que valida si es un .md
-  fileMd: function (pathFile) {
+  function fileMd (pathFile) {
     if (path.extname(pathFile) === ".md") {
       return true
     } else {
       return false
     }
-  },
+  };
 
   
 //funcion asíncrona para leer el archivo  
@@ -93,7 +94,7 @@ function urlify(data) {
       text: grpdDta[1],
       file: pathFile
     };
-    htmlLinks.push(grupoData);
+    htmlLinks.push(grupoData);  
   }
   console.log(htmlLinks.length);
   console.log(htmlLinks);
@@ -106,8 +107,7 @@ module.exports = {
   pathInserted,
   pathWorking,
   pathDirectory,
-  pathMd,
+  fileMd,
   readingFile,
 }
 
-};

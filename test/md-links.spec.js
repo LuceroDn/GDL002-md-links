@@ -1,6 +1,9 @@
 const index = require("../src/index.js");
 
 describe("pathInserted", () => {
+  it("Should be a function", () => {
+    expect(typeof index.pathInserted).toBe("function");
+  });
   it("Should return false if the user didn't enter a path", () => {
     expect(index.pathInserted()).toBe(false);
   });
@@ -10,6 +13,9 @@ describe("pathInserted", () => {
 });
 
 describe("pathWorking", () =>{
+  it("Should be a function", () => {
+    expect(typeof index.pathWorking).toBe("function");
+  });
   it("Should be false if the path doesn't exist", () => {
     expect(index.pathWorking("./README.txt")).toBe(false);
   });
@@ -28,6 +34,9 @@ describe("pathWorking", () =>{
 // });
 
 describe("pathDirectory", () =>{
+  it("Should be a function", () => {
+    expect(typeof index.pathDirectory).toBe("function");
+  });
   it("Should be true if the path is a directory", () => {
     expect(index.pathDirectory("/Users/Lucero/Documents/JavaScript/GDL002-md-links")).toBe(true);
   });
@@ -37,6 +46,9 @@ describe("pathDirectory", () =>{
 });
 
 describe("fileMd", () => {
+  it("Should be a function", () => {
+    expect(typeof index.fileMd).toBe("function");
+  });
   it("Should be true if the file is a .md", () => {
     expect(index.fileMd("./README.md")).toBe(true);
   });
@@ -45,23 +57,16 @@ describe("fileMd", () => {
   });
 });
 
-describe("readingFile", () => {
-  it("Should read the file", () =>{
-    expect(index.readingFile("./src/prueba.md")).toBe(true);
+test('should be read content of file with a asyncronous function', () => {
+  readFile('../src/prueba.md', null).then((result) => {
+    expect(result).equality('Content of file');
   });
 });
 
-describe("getLinks", () => {
-  it("Should identify the link '[Google](https://www.google.com)' and return an array of objects", () => {
-    expect(index.getLinks("https://www.google.com")).toEqual("https://www.google.com");
-  });
- });
-
-//   describe('markdown-it', () => {
-//     var md = require('../')({
-//       html: true,
-//       langPrefix: '',
-//       typographer: true,
-//       linkify: true
-//     });
+// describe("readingFile", () => {
+//   it("Should read the file", () =>{
+//     expect(index.readingFile("./src/prueba.md")).toBe(true);
+//   });
 // });
+
+
