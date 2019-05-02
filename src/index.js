@@ -1,9 +1,9 @@
 
-const linksMd = require("./mdLinks.js");
-const pathFile = process.argv[2];
-const path = require("path");
-const readingFileResult = linksMd(pathFile, null);
 const fs = require("fs");
+const path = require("path");
+const pathFile = process.argv[2];
+const linksMd = require("./mdLinks.js");
+const readingFileResult = linksMd(pathFile, null);
 
 
 
@@ -60,7 +60,7 @@ function fileMd(pathFile) {
 
 
 //funcion asíncrona para leer el archivo  
-function readingFile(pathFile, options) {
+/*function readingFile(pathFile, options) {
   return new Promise((resolve, reject) => {
     fs.readFile(pathFile, function (err, data) {
       if (err) {
@@ -69,7 +69,7 @@ function readingFile(pathFile, options) {
       resolve(data.toString());
     });
   });
-};
+};*/
 
 // Resultado despues de leer el archivo
 readingFileResult.then(
@@ -80,8 +80,8 @@ readingFileResult.then(
   (err) => { // On Error
     console.error(err);
   }
-)
-
+  )
+  
 //Función que extrae los links y los imprime en arreglo de objetos
 function urlify(data) {
   const mdLinkRgEx = /\[(.+?)\]\(.+?\)/g;
@@ -105,10 +105,11 @@ function urlify(data) {
 
 
 module.exports = {
-  pathInserted,
-  pathWorking,
-  pathDirectory,
-  fileMd,
-  readingFile,
+  "pathInserted": pathInserted,
+  "pathWorking": pathWorking,
+  "pathDirectory": pathDirectory,
+  "fileMd": fileMd,
+  "readingFileResult": readingFileResult,
+  "urlify": urlify,
 }
 
