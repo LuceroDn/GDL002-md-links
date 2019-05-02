@@ -1,4 +1,6 @@
 const index = require("../src/index.js");
+const readFile = require('../src/mdLinks.js');
+
 
 describe("pathInserted", () => {
   it("Should be a function", () => {

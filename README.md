@@ -1,5 +1,44 @@
 # Markdown Links
 
+## Descripción
+
+### Markdown Links permite ver y verificar los enlaces que hay en un archivo con formato md.
+
+## Caracteristicas
+
+* Extrae enlaces de un archivo md
+* Información del enlace: link, linea, texto, estado
+* Opción de validar los enlaces individuales y en carpetas
+* Opción de estadísticas de enlaces en los archivos y carpetas
+* Recorre carpetas recursivamente
+* Se puede importar como modulo
+* Se puede usar por medio de la terminal
+
+## Instalación
+
+### Instalar desde la terminal
+
+> npm install github-LuceroDn/md-Links
+
+### JavaScript API
+
+El módulo puede importarse en otros scripts de Node.js y ofrece la siguiente interfaz:
+
+#### `mdLinks(path, options)`
+
+##### Argumentos
+
+- `path`: Ruta absoluta o relativa al archivo o directorio. 
+- `options`: Un objeto con las siguientes propiedades:
+  - `validate`: Booleano que determina si se desea validar los links
+    encontrados.
+
+## Diagrama de flujo
+
+![Diagrama](/img/diagrama.png)
+
+
+#
 ## Preámbulo
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
