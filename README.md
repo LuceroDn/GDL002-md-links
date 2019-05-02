@@ -2,7 +2,7 @@
 
 ## Descripción
 
-### Markdown Links permite ver y verificar los enlaces que hay en un archivo con formato md.
+ Markdown Links permite ver y verificar los enlaces que hay en un archivo con formato md.
 
 ## Caracteristicas
 
