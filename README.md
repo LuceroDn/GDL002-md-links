@@ -35,7 +35,7 @@ El módulo puede importarse en otros scripts de Node.js y ofrece la siguiente in
 
 ## Diagrama de flujo
 
-![Diagrama](/img/diagrama.png)
+![Diagrama](/img/MD.png)
 
 
 #
