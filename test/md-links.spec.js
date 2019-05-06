@@ -61,7 +61,7 @@ describe("fileMd", () => {
 
 test('should be read content of file with a asyncronous function', () => {
   readFile('../src/prueba.md', null).then((result) => {
-    expect(result).equality('Content of file');
+    expect(result).toEqual('Content of file');
   });
 });
 

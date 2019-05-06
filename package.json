@@ -1,6 +1,9 @@
 {
   "name": "md-links",
   "version": "0.1.0",
+  "bin": {
+    "md-Links":"index.js"
+  },
   "scripts": {
     "eslint": "eslint --ext .js test/",
     "pretest": "npm run eslint",
